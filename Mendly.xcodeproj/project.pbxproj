@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF1A00012F3D000100000001 /* TelemetryDeck in Frameworks */ = {isa = PBXBuildFile; productRef = AF1A00032F3D000100000003 /* TelemetryDeck */; };
+		AF3A188D2F2D4DC50006DF0E /* JointDecision.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */; };
+		AF3A188E2F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */; };
+		AF3A188F2F2D4DC50006DF0E /* Decoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */; };
+		AF3A18902F2D4DC50006DF0E /* wespeaker_v2.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */; };
+		AF3A18912F2D4DC50006DF0E /* parakeet_vocab.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */; };
+		AF3A18922F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */; };
+		AF3A18932F2D4DC50006DF0E /* Preprocessor.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */; };
+		AF3A18942F2D4DC50006DF0E /* Encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */; };
+		AF5823862EF71666003C33CE /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237D2EF71666003C33CE /* HistoryItem.swift */; };
+		AF5823872EF71666003C33CE /* SharedHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5823792EF71666003C33CE /* SharedHistoryManager.swift */; };
+		AF5823882EF71666003C33CE /* CloudKitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237B2EF71666003C33CE /* CloudKitRecord.swift */; };
+		AF5823892EF71666003C33CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237C2EF71666003C33CE /* Constants.swift */; };
+		AF58238A2EF71666003C33CE /* CloudKitSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */; };
+		AF58238F2EF71D81003C33CE /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = AF58238E2EF71D81003C33CE /* FluidAudio */; };
+		AF7F00AE2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */; };
+		AF9E25362F048C7B000AD552 /* AudioProcessingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */; };
+		AF9E25372F048C7B000AD552 /* SharedVADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25302F048C7B000AD552 /* SharedVADManager.swift */; };
+		AF9E25382F048C7B000AD552 /* TranscriptionTextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */; };
+		AFF0DA092F4C942300255249 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFF0DA082F4C942300255249 /* FacebookCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Decoder.mlmodelc; sourceTree = "<group>"; };
+		AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Encoder.mlmodelc; sourceTree = "<group>"; };
+		AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JointDecision.mlmodelc; sourceTree = "<group>"; };
+		AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = parakeet_vocab.json; sourceTree = "<group>"; };
+		AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Preprocessor.mlmodelc; sourceTree = "<group>"; };
+		AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "silero-vad-unified-256ms-v6.0.0.mlmodelc"; sourceTree = "<group>"; };
+		AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = pyannote_segmentation.mlmodelc; sourceTree = "<group>"; };
+		AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = wespeaker_v2.mlmodelc; sourceTree = "<group>"; };
+		AF3F63CF2EF7092B00E1A424 /* Mendly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mendly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSyncManager.swift; sourceTree = "<group>"; };
+		AF5823792EF71666003C33CE /* SharedHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryManager.swift; sourceTree = "<group>"; };
+		AF58237B2EF71666003C33CE /* CloudKitRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitRecord.swift; sourceTree = "<group>"; };
+		AF58237C2EF71666003C33CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF58237D2EF71666003C33CE /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DMSerifDisplay-Regular.ttf"; path = "Mendly/DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessingUtilities.swift; sourceTree = "<group>"; };
+		AF9E25302F048C7B000AD552 /* SharedVADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedVADManager.swift; sourceTree = "<group>"; };
+		AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTextProcessor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AF3F63D12EF7092B00E1A424 /* Exceptions for "Mendly" folder in "Mendly" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AF3F63CE2EF7092B00E1A424 /* Mendly */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AF3F63D02EF7092B00E1A424 /* Mendly */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AF3F63D12EF7092B00E1A424 /* Exceptions for "Mendly" folder in "Mendly" target */,
+			);
+			path = Mendly;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF3F63CC2EF7092B00E1A424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF58238F2EF71D81003C33CE /* FluidAudio in Frameworks */,
+				AFF0DA092F4C942300255249 /* FacebookCore in Frameworks */,
+				AF1A00012F3D000100000001 /* TelemetryDeck in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF3A18862F2D4DC50006DF0E /* parakeet-tdt-0.6b-v3-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */,
+				AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */,
+				AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */,
+				AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */,
+				AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */,
+			);
+			path = "parakeet-tdt-0.6b-v3-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A18882F2D4DC50006DF0E /* silero-vad-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */,
+			);
+			path = "silero-vad-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A188B2F2D4DC50006DF0E /* speaker-diarization-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */,
+				AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */,
+			);
+			path = "speaker-diarization-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A188C2F2D4DC50006DF0E /* BundledModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18862F2D4DC50006DF0E /* parakeet-tdt-0.6b-v3-coreml */,
+				AF3A18882F2D4DC50006DF0E /* silero-vad-coreml */,
+				AF3A188B2F2D4DC50006DF0E /* speaker-diarization-coreml */,
+			);
+			path = BundledModels;
+			sourceTree = "<group>";
+		};
+		AF5823742EF7136A003C33CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF58237A2EF71666003C33CE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */,
+				AF5823792EF71666003C33CE /* SharedHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AF58237E2EF71666003C33CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF58237B2EF71666003C33CE /* CloudKitRecord.swift */,
+				AF58237C2EF71666003C33CE /* Constants.swift */,
+				AF58237D2EF71666003C33CE /* HistoryItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF5823802EF71666003C33CE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF58237A2EF71666003C33CE /* Managers */,
+				AF58237E2EF71666003C33CE /* Models */,
+				AF9E25322F048C7B000AD552 /* Audio */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AF9E25322F048C7B000AD552 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */,
+				AF9E25302F048C7B000AD552 /* SharedVADManager.swift */,
+				AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		AFAEA93D2EF5ED7700F632EA = {
+			isa = PBXGroup;
+			children = (
+				AF5823802EF71666003C33CE /* Shared */,
+				AF3F63D02EF7092B00E1A424 /* Mendly */,
+				AF5823742EF7136A003C33CE /* Frameworks */,
+				AFAEA9472EF5ED7800F632EA /* Products */,
+				AF3A188C2F2D4DC50006DF0E /* BundledModels */,
+				AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */,
+			);
+			sourceTree = "<group>";
+		};
+		AFAEA9472EF5ED7800F632EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F63CF2EF7092B00E1A424 /* Mendly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF3F63CE2EF7092B00E1A424 /* Mendly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3F63D72EF7092C00E1A424 /* Build configuration list for PBXNativeTarget "Mendly" */;
+			buildPhases = (
+				AF3F63CB2EF7092B00E1A424 /* Sources */,
+				AF3F63CC2EF7092B00E1A424 /* Frameworks */,
+				AF3F63CD2EF7092B00E1A424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AF3F63D02EF7092B00E1A424 /* Mendly */,
+			);
+			name = Mendly;
+			packageProductDependencies = (
+				AF58238E2EF71D81003C33CE /* FluidAudio */,
+				AF1A00032F3D000100000003 /* TelemetryDeck */,
+				AFF0DA082F4C942300255249 /* FacebookCore */,
+			);
+			productName = Mendly;
+			productReference = AF3F63CF2EF7092B00E1A424 /* Mendly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFAEA93E2EF5ED7700F632EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					AF3F63CE2EF7092B00E1A424 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = AFAEA9412EF5ED7700F632EA /* Build configuration list for PBXProject "Mendly" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFAEA93D2EF5ED7700F632EA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */,
+				AF1A00022F3D000100000002 /* XCRemoteSwiftPackageReference "SwiftSDK" */,
+				AFF0DA072F4C942300255249 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AFAEA9472EF5ED7800F632EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF3F63CE2EF7092B00E1A424 /* Mendly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF3F63CD2EF7092B00E1A424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3A188D2F2D4DC50006DF0E /* JointDecision.mlmodelc in Resources */,
+				AF3A188E2F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc in Resources */,
+				AF3A188F2F2D4DC50006DF0E /* Decoder.mlmodelc in Resources */,
+				AF3A18902F2D4DC50006DF0E /* wespeaker_v2.mlmodelc in Resources */,
+				AF3A18912F2D4DC50006DF0E /* parakeet_vocab.json in Resources */,
+				AF7F00AE2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf in Resources */,
+				AF3A18922F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc in Resources */,
+				AF3A18932F2D4DC50006DF0E /* Preprocessor.mlmodelc in Resources */,
+				AF3A18942F2D4DC50006DF0E /* Encoder.mlmodelc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF3F63CB2EF7092B00E1A424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5823862EF71666003C33CE /* HistoryItem.swift in Sources */,
+				AF5823872EF71666003C33CE /* SharedHistoryManager.swift in Sources */,
+				AF5823882EF71666003C33CE /* CloudKitRecord.swift in Sources */,
+				AF9E25362F048C7B000AD552 /* AudioProcessingUtilities.swift in Sources */,
+				AF9E25372F048C7B000AD552 /* SharedVADManager.swift in Sources */,
+				AF9E25382F048C7B000AD552 /* TranscriptionTextProcessor.swift in Sources */,
+				AF5823892EF71666003C33CE /* Constants.swift in Sources */,
+				AF58238A2EF71666003C33CE /* CloudKitSyncManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF3F63D82EF7092C00E1A424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mendly/Mendly.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mendly/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.Mendly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF3F63D92EF7092C00E1A424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mendly/Mendly.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mendly/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.Mendly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFAEA9502EF5ED7900F632EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFAEA9512EF5ED7900F632EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF3F63D72EF7092C00E1A424 /* Build configuration list for PBXNativeTarget "Mendly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3F63D82EF7092C00E1A424 /* Debug */,
+				AF3F63D92EF7092C00E1A424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAEA9412EF5ED7700F632EA /* Build configuration list for PBXProject "Mendly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAEA9502EF5ED7900F632EA /* Debug */,
+				AFAEA9512EF5ED7900F632EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF1A00022F3D000100000002 /* XCRemoteSwiftPackageReference "SwiftSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TelemetryDeck/SwiftSDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluidInference/FluidAudio.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		AFF0DA072F4C942300255249 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF1A00032F3D000100000003 /* TelemetryDeck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF1A00022F3D000100000002 /* XCRemoteSwiftPackageReference "SwiftSDK" */;
+			productName = TelemetryDeck;
+		};
+		AF58238E2EF71D81003C33CE /* FluidAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */;
+			productName = FluidAudio;
+		};
+		AFF0DA082F4C942300255249 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF0DA072F4C942300255249 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AFAEA93E2EF5ED7700F632EA /* Project object */;
+}

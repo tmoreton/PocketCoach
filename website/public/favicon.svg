@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B9E8A"/>
+      <stop offset="100%" stop-color="#4A7B68"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- Heart shape matching app icon -->
+  <path d="M256 400 C256 400 128 310 128 220 C128 170 168 140 208 140 C235 140 252 158 256 165 C260 158 277 140 304 140 C344 140 384 170 384 220 C384 310 256 400 256 400Z" fill="white"/>
+</svg>

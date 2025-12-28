@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5"/>
+      <stop offset="100%" stop-color="#E8DDD3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B9E8A"/>
+      <stop offset="100%" stop-color="#4A7B68"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="950" cy="120" r="200" fill="#6B9E8A" opacity="0.08"/>
+  <circle cx="1050" cy="450" r="150" fill="#6B9E8A" opacity="0.06"/>
+  <circle cx="150" cy="500" r="120" fill="#E8DDD3" opacity="0.5"/>
+
+  <!-- Logo icon -->
+  <rect x="80" y="160" width="72" height="72" rx="16" fill="url(#accent)"/>
+  <text x="116" y="213" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="white">m</text>
+
+  <!-- Brand name -->
+  <text x="170" y="212" font-family="Georgia, 'DM Serif Display', serif" font-size="42" fill="#2B3D4F" letter-spacing="-0.5">Mend.ly</text>
+
+  <!-- Main headline -->
+  <text x="80" y="320" font-family="Georgia, 'DM Serif Display', serif" font-size="64" fill="#2B3D4F" letter-spacing="-1">Therapy that fits your life</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="385" font-family="Inter, -apple-system, sans-serif" font-size="26" fill="#556270">Private AI companion for mental wellness.</text>
+  <text x="80" y="420" font-family="Inter, -apple-system, sans-serif" font-size="26" fill="#556270">No account required. Available anytime.</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="600" width="1200" height="30" fill="url(#accent)"/>
+
+  <!-- URL -->
+  <text x="80" y="530" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#6B9E8A" font-weight="600">mendly.app</text>
+</svg>
