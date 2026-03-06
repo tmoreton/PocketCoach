@@ -1,0 +1,100 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "keyword": {
+      "font": "./fonts/DMSerifDisplay-Regular.ttf",
+      "color": "#4B9E7E"
+    },
+    "title": {
+      "font": "./fonts/DMSerifDisplay-Regular.ttf",
+      "color": "#333333"
+    },
+    "background": "./background.png",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title": false
+  },
+  "data": [
+    {
+      "filter": "01_Onboarding_Welcome",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Better Conversations\nStart Here"
+      }
+    },
+    {
+      "filter": "02_Onboarding_Features",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Record, Analyze &\nGrow Together"
+      }
+    },
+    {
+      "filter": "03_Record_Screen",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "One Tap to Record\n& Analyze"
+      }
+    },
+    {
+      "filter": "04_Analysis_Results",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Instant Relationship\nInsights"
+      }
+    },
+    {
+      "filter": "05_Full_Analysis",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Deep Coaching &\nPattern Recognition"
+      }
+    },
+    {
+      "filter": "06_Conversation_View",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "See Who Said What,\nSide by Side"
+      }
+    },
+    {
+      "filter": "07_History_View",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Track Your Growth\nOver Time"
+      }
+    },
+    {
+      "filter": "08_Settings_View",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Personalize Your\nCoaching Experience"
+      }
+    },
+    {
+      "filter": "09_Dark_Mode_Analysis",
+      "keyword": {
+        "text": ""
+      },
+      "title": {
+        "text": "Beautiful in\nLight & Dark"
+      }
+    }
+  ]
+}

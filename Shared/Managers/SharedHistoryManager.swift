@@ -6,7 +6,7 @@ class SharedHistoryManager: ObservableObject {
     @Published var items: [HistoryItem] = []
     @Published var isSyncing = false
 
-    private let storageKey = "MendlyHistory"
+    private let storageKey = "PocketCoachHistory"
     private let cloudKitManager: CloudKitSyncManager?
     private var cancellables = Set<AnyCancellable>()
     private var isClearing = false

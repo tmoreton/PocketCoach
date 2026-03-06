@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support - PocketCoach</title>
+    <meta name="description" content="Get help with PocketCoach, your private AI couples coaching companion. FAQ about privacy, data, system requirements, and how to contact support." />
+    <meta name="theme-color" content="#6B9E8A" />
+    <link rel="canonical" href="https://getpocketcoach.app/support" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://getpocketcoach.app/support" />
+    <meta property="og:title" content="Support - PocketCoach" />
+    <meta property="og:description" content="Get help with PocketCoach. FAQ about privacy, data, system requirements, and contact support." />
+    <meta property="og:image" content="https://getpocketcoach.app/og-image.png" />
+    <meta property="og:site_name" content="PocketCoach" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Support - PocketCoach" />
+    <meta name="twitter:description" content="Get help with PocketCoach. FAQ about privacy, data, system requirements, and contact support." />
+    <meta name="twitter:image" content="https://getpocketcoach.app/og-image.png" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import '../src/style.css'
+
+      document.querySelector('#app').innerHTML = `
+        <nav>
+          <div class="nav-inner">
+            <a href="/" class="logo-link">PocketCoach</a>
+            <a href="#" class="nav-cta">Download</a>
+          </div>
+        </nav>
+
+        <main class="subpage">
+          <h1>Support</h1>
+          <p class="last-updated">We're here to help</p>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <h2>Is my data private?</h2>
+          <p>
+            Yes. PocketCoach requires no account and collects no personal information. Audio is
+            processed on your device — only the text transcript is sent securely (encrypted)
+            to generate AI responses. Transcripts are not stored on any server after processing.
+            See our <a href="/privacy">Privacy Policy</a> for full details.
+          </p>
+
+          <h2>Do I need an internet connection?</h2>
+          <p>
+            An internet connection is needed for AI responses. However, audio recording and
+            speech recognition work offline on your device.
+          </p>
+
+          <h2>What are the system requirements?</h2>
+          <p>
+            PocketCoach requires an iPhone running iOS 17.0 or later.
+          </p>
+
+          <h2>How do I delete my data?</h2>
+          <p>
+            Since all data is stored locally on your device, you can delete it by removing the
+            PocketCoach app from your iPhone. You can also clear conversation history from within the
+            app's settings. No data exists on any external server.
+          </p>
+
+          <h2>Is PocketCoach a replacement for professional counseling?</h2>
+          <p>
+            PocketCoach is designed as a supportive couples coaching companion, not a replacement for
+            professional counseling. If you are experiencing a crisis,
+            please contact a qualified professional or call the
+            <strong>988 Suicide &amp; Crisis Lifeline</strong> (call or text 988).
+          </p>
+
+          <h2>Contact Us</h2>
+          <p>
+            If you need further assistance, have feedback, or want to report an issue,
+            please email us at:
+          </p>
+          <p>
+            <a href="mailto:support@getpocketcoach.app">support@getpocketcoach.app</a>
+          </p>
+          <p>
+            We typically respond within 48 hours.
+          </p>
+        </main>
+
+        <footer>
+          <div class="footer-inner">
+            <div class="footer-links">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/support">Support</a>
+            </div>
+            <p>&copy; 2025 PocketCoach. All rights reserved.</p>
+          </div>
+        </footer>
+      `
+    </script>
+  </body>
+</html>

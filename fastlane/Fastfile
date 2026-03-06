@@ -1,0 +1,42 @@
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Capture App Store screenshots on all device sizes"
+  lane :screenshots do
+    capture_screenshots(
+      scheme: "PocketCoach",
+      output_directory: "./fastlane/screenshots",
+      clear_previous_screenshots: true,
+      override_status_bar: true,
+      concurrent_simulators: true,
+      launch_arguments: ["-SCREENSHOT_MODE"]
+    )
+  end
+
+  desc "Add device frames and marketing text to screenshots"
+  lane :frame_screenshots do
+    frame_screenshots(
+      path: "./fastlane/screenshots",
+      force_device_type: nil
+    )
+  end
+
+  desc "Upload screenshots to App Store Connect"
+  lane :upload_screenshots do
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      screenshots_path: "./fastlane/screenshots"
+    )
+  end
+
+  desc "Full pipeline: capture, frame, and upload screenshots"
+  lane :ship_screenshots do
+    screenshots
+    frame_screenshots
+    upload_screenshots
+  end
+
+end

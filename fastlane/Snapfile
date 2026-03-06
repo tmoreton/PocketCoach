@@ -1,0 +1,33 @@
+# Devices to capture screenshots on
+devices([
+  "iPhone 15 Pro Max",                          # 6.7" — 1290×2796 (required)
+  "iPhone 11 Pro Max",                          # 6.5" — 1242×2688 (required)
+  "iPad Pro (12.9-inch) (6th generation)"       # 13"  — 2048×2732 (required)
+])
+
+# Languages
+languages(["en-US"])
+
+# Xcode scheme
+scheme("PocketCoach")
+
+# Output directory
+output_directory("./fastlane/screenshots")
+
+# Clear previous screenshots
+clear_previous_screenshots(true)
+
+# Launch arguments for screenshot mode
+launch_arguments(["-SCREENSHOT_MODE"])
+
+# Stop after first error
+stop_after_first_error(true)
+
+# Number of concurrent simulators
+concurrent_simulators(true)
+
+# Override status bar
+override_status_bar(true)
+
+# Erase simulator before running
+erase_simulator(false)

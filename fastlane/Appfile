@@ -1,0 +1,5 @@
+app_identifier("com.reactnativenerd.PocketCoach")
+apple_id("tim@reactnativenerd.com")
+
+itc_team_id("") # App Store Connect Team ID (fill in)
+team_id("")     # Developer Portal Team ID (fill in)

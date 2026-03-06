@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF3A188D2F2D4DC50006DF0E /* JointDecision.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */; };
+		AF3A188E2F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */; };
+		AF3A188F2F2D4DC50006DF0E /* Decoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */; };
+		AF3A18902F2D4DC50006DF0E /* wespeaker_v2.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */; };
+		AF3A18912F2D4DC50006DF0E /* parakeet_vocab.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */; };
+		AF3A18922F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */; };
+		AF3A18932F2D4DC50006DF0E /* Preprocessor.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */; };
+		AF3A18942F2D4DC50006DF0E /* Encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */; };
+		AF5823862EF71666003C33CE /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237D2EF71666003C33CE /* HistoryItem.swift */; };
+		AF5823872EF71666003C33CE /* SharedHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5823792EF71666003C33CE /* SharedHistoryManager.swift */; };
+		AF5823882EF71666003C33CE /* CloudKitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237B2EF71666003C33CE /* CloudKitRecord.swift */; };
+		AF5823892EF71666003C33CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58237C2EF71666003C33CE /* Constants.swift */; };
+		AF58238A2EF71666003C33CE /* CloudKitSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */; };
+		AF58238F2EF71D81003C33CE /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = AF58238E2EF71D81003C33CE /* FluidAudio */; };
+		AF7F00AE2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */; };
+		AF9E25362F048C7B000AD552 /* AudioProcessingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */; };
+		AF9E25372F048C7B000AD552 /* SharedVADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25302F048C7B000AD552 /* SharedVADManager.swift */; };
+		AF9E25382F048C7B000AD552 /* TranscriptionTextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */; };
+		AFCC00082F5A000100000008 /* PocketCoachScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */; };
+		AFCC00092F5A000100000009 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC00022F5A000100000002 /* SnapshotHelper.swift */; };
+		AFF0DA0A2F4C942300255250 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AFF0DA0B2F4C942300255250 /* FirebaseAnalytics */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFCC000A2F5A00010000000A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFAEA93E2EF5ED7700F632EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3F63CE2EF7092B00E1A424;
+			remoteInfo = PocketCoach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Decoder.mlmodelc; sourceTree = "<group>"; };
+		AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Encoder.mlmodelc; sourceTree = "<group>"; };
+		AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JointDecision.mlmodelc; sourceTree = "<group>"; };
+		AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = parakeet_vocab.json; sourceTree = "<group>"; };
+		AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Preprocessor.mlmodelc; sourceTree = "<group>"; };
+		AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "silero-vad-unified-256ms-v6.0.0.mlmodelc"; sourceTree = "<group>"; };
+		AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = pyannote_segmentation.mlmodelc; sourceTree = "<group>"; };
+		AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = wespeaker_v2.mlmodelc; sourceTree = "<group>"; };
+		AF3F63CF2EF7092B00E1A424 /* PocketCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSyncManager.swift; sourceTree = "<group>"; };
+		AF5823792EF71666003C33CE /* SharedHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryManager.swift; sourceTree = "<group>"; };
+		AF58237B2EF71666003C33CE /* CloudKitRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitRecord.swift; sourceTree = "<group>"; };
+		AF58237C2EF71666003C33CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF58237D2EF71666003C33CE /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DMSerifDisplay-Regular.ttf"; path = "PocketCoach/DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessingUtilities.swift; sourceTree = "<group>"; };
+		AF9E25302F048C7B000AD552 /* SharedVADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedVADManager.swift; sourceTree = "<group>"; };
+		AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTextProcessor.swift; sourceTree = "<group>"; };
+		AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketCoachScreenshots.swift; sourceTree = "<group>"; };
+		AFCC00022F5A000100000002 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketCoachScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AF3F63D12EF7092B00E1A424 /* Exceptions for "PocketCoach" folder in "PocketCoach" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AF3F63CE2EF7092B00E1A424 /* PocketCoach */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AF3F63D02EF7092B00E1A424 /* PocketCoach */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AF3F63D12EF7092B00E1A424 /* Exceptions for "PocketCoach" folder in "PocketCoach" target */,
+			);
+			path = PocketCoach;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF3F63CC2EF7092B00E1A424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF58238F2EF71D81003C33CE /* FluidAudio in Frameworks */,
+				AFF0DA0A2F4C942300255250 /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFCC00062F5A000100000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF3A18862F2D4DC50006DF0E /* parakeet-tdt-0.6b-v3-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */,
+				AF3A18822F2D4DC50006DF0E /* Encoder.mlmodelc */,
+				AF3A18832F2D4DC50006DF0E /* JointDecision.mlmodelc */,
+				AF3A18842F2D4DC50006DF0E /* parakeet_vocab.json */,
+				AF3A18852F2D4DC50006DF0E /* Preprocessor.mlmodelc */,
+			);
+			path = "parakeet-tdt-0.6b-v3-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A18882F2D4DC50006DF0E /* silero-vad-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18872F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc */,
+			);
+			path = "silero-vad-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A188B2F2D4DC50006DF0E /* speaker-diarization-coreml */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18892F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc */,
+				AF3A188A2F2D4DC50006DF0E /* wespeaker_v2.mlmodelc */,
+			);
+			path = "speaker-diarization-coreml";
+			sourceTree = "<group>";
+		};
+		AF3A188C2F2D4DC50006DF0E /* BundledModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A18862F2D4DC50006DF0E /* parakeet-tdt-0.6b-v3-coreml */,
+				AF3A18882F2D4DC50006DF0E /* silero-vad-coreml */,
+				AF3A188B2F2D4DC50006DF0E /* speaker-diarization-coreml */,
+			);
+			path = BundledModels;
+			sourceTree = "<group>";
+		};
+		AF5823742EF7136A003C33CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF58237A2EF71666003C33CE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AF5823782EF71666003C33CE /* CloudKitSyncManager.swift */,
+				AF5823792EF71666003C33CE /* SharedHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AF58237E2EF71666003C33CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF58237B2EF71666003C33CE /* CloudKitRecord.swift */,
+				AF58237C2EF71666003C33CE /* Constants.swift */,
+				AF58237D2EF71666003C33CE /* HistoryItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF5823802EF71666003C33CE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF58237A2EF71666003C33CE /* Managers */,
+				AF58237E2EF71666003C33CE /* Models */,
+				AF9E25322F048C7B000AD552 /* Audio */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AF9E25322F048C7B000AD552 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */,
+				AF9E25302F048C7B000AD552 /* SharedVADManager.swift */,
+				AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		AFAEA93D2EF5ED7700F632EA = {
+			isa = PBXGroup;
+			children = (
+				AF5823802EF71666003C33CE /* Shared */,
+				AF3F63D02EF7092B00E1A424 /* PocketCoach */,
+				AFCC00042F5A000100000004 /* PocketCoachScreenshots */,
+				AF5823742EF7136A003C33CE /* Frameworks */,
+				AFAEA9472EF5ED7800F632EA /* Products */,
+				AF3A188C2F2D4DC50006DF0E /* BundledModels */,
+				AF7F00AD2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf */,
+			);
+			sourceTree = "<group>";
+		};
+		AFAEA9472EF5ED7800F632EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F63CF2EF7092B00E1A424 /* PocketCoach.app */,
+				AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFCC00042F5A000100000004 /* PocketCoachScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */,
+				AFCC00022F5A000100000002 /* SnapshotHelper.swift */,
+			);
+			path = PocketCoachScreenshots;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF3F63CE2EF7092B00E1A424 /* PocketCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3F63D72EF7092C00E1A424 /* Build configuration list for PBXNativeTarget "PocketCoach" */;
+			buildPhases = (
+				AF3F63CB2EF7092B00E1A424 /* Sources */,
+				AF3F63CC2EF7092B00E1A424 /* Frameworks */,
+				AF3F63CD2EF7092B00E1A424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AF3F63D02EF7092B00E1A424 /* PocketCoach */,
+			);
+			name = PocketCoach;
+			packageProductDependencies = (
+				AF58238E2EF71D81003C33CE /* FluidAudio */,
+				AFF0DA0B2F4C942300255250 /* FirebaseAnalytics */,
+			);
+			productName = PocketCoach;
+			productReference = AF3F63CF2EF7092B00E1A424 /* PocketCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFCC000F2F5A00010000000F /* PocketCoachScreenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFCC000E2F5A00010000000E /* Build configuration list for PBXNativeTarget "PocketCoachScreenshots" */;
+			buildPhases = (
+				AFCC00052F5A000100000005 /* Sources */,
+				AFCC00062F5A000100000006 /* Frameworks */,
+				AFCC00072F5A000100000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFCC000B2F5A00010000000B /* PBXTargetDependency */,
+			);
+			name = PocketCoachScreenshots;
+			productName = PocketCoachScreenshots;
+			productReference = AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFAEA93E2EF5ED7700F632EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					AF3F63CE2EF7092B00E1A424 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					AFCC000F2F5A00010000000F = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AF3F63CE2EF7092B00E1A424;
+					};
+				};
+			};
+			buildConfigurationList = AFAEA9412EF5ED7700F632EA /* Build configuration list for PBXProject "PocketCoach" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFAEA93D2EF5ED7700F632EA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */,
+				AFF0DA0C2F4C942300255251 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AFAEA9472EF5ED7800F632EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF3F63CE2EF7092B00E1A424 /* PocketCoach */,
+				AFCC000F2F5A00010000000F /* PocketCoachScreenshots */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF3F63CD2EF7092B00E1A424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3A188D2F2D4DC50006DF0E /* JointDecision.mlmodelc in Resources */,
+				AF3A188E2F2D4DC50006DF0E /* silero-vad-unified-256ms-v6.0.0.mlmodelc in Resources */,
+				AF3A188F2F2D4DC50006DF0E /* Decoder.mlmodelc in Resources */,
+				AF3A18902F2D4DC50006DF0E /* wespeaker_v2.mlmodelc in Resources */,
+				AF3A18912F2D4DC50006DF0E /* parakeet_vocab.json in Resources */,
+				AF7F00AE2F2EB1AD0096617A /* DMSerifDisplay-Regular.ttf in Resources */,
+				AF3A18922F2D4DC50006DF0E /* pyannote_segmentation.mlmodelc in Resources */,
+				AF3A18932F2D4DC50006DF0E /* Preprocessor.mlmodelc in Resources */,
+				AF3A18942F2D4DC50006DF0E /* Encoder.mlmodelc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFCC00072F5A000100000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF3F63CB2EF7092B00E1A424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5823862EF71666003C33CE /* HistoryItem.swift in Sources */,
+				AF5823872EF71666003C33CE /* SharedHistoryManager.swift in Sources */,
+				AF5823882EF71666003C33CE /* CloudKitRecord.swift in Sources */,
+				AF9E25362F048C7B000AD552 /* AudioProcessingUtilities.swift in Sources */,
+				AF9E25372F048C7B000AD552 /* SharedVADManager.swift in Sources */,
+				AF9E25382F048C7B000AD552 /* TranscriptionTextProcessor.swift in Sources */,
+				AF5823892EF71666003C33CE /* Constants.swift in Sources */,
+				AF58238A2EF71666003C33CE /* CloudKitSyncManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFCC00052F5A000100000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCC00082F5A000100000008 /* PocketCoachScreenshots.swift in Sources */,
+				AFCC00092F5A000100000009 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFCC000B2F5A00010000000B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3F63CE2EF7092B00E1A424 /* PocketCoach */;
+			targetProxy = AFCC000A2F5A00010000000A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF3F63D82EF7092C00E1A424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocketCoach/PocketCoach.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PocketCoach/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = Debug;
+		};
+		AF3F63D92EF7092C00E1A424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocketCoach/PocketCoach.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PocketCoach/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFAEA9502EF5ED7900F632EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFAEA9512EF5ED7900F632EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AFCC000C2F5A00010000000C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoachScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketCoach;
+			};
+			name = Debug;
+		};
+		AFCC000D2F5A00010000000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GVXC5FQ2RP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoachScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketCoach;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF3F63D72EF7092C00E1A424 /* Build configuration list for PBXNativeTarget "PocketCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3F63D82EF7092C00E1A424 /* Debug */,
+				AF3F63D92EF7092C00E1A424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAEA9412EF5ED7700F632EA /* Build configuration list for PBXProject "PocketCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAEA9502EF5ED7900F632EA /* Debug */,
+				AFAEA9512EF5ED7900F632EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFCC000E2F5A00010000000E /* Build configuration list for PBXNativeTarget "PocketCoachScreenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCC000C2F5A00010000000C /* Debug */,
+				AFCC000D2F5A00010000000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluidInference/FluidAudio.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		AFF0DA0C2F4C942300255251 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF58238E2EF71D81003C33CE /* FluidAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF58238D2EF71D81003C33CE /* XCRemoteSwiftPackageReference "FluidAudio" */;
+			productName = FluidAudio;
+		};
+		AFF0DA0B2F4C942300255250 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF0DA0C2F4C942300255251 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AFAEA93E2EF5ED7700F632EA /* Project object */;
+}

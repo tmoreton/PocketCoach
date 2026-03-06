@@ -37,8 +37,12 @@ BundledModels/
 ## Cursor
 .cursor/
 
+## Fastlane outputs (keep config, ignore generated files)
+fastlane/report.xml
+fastlane/README.md
+fastlane/screenshots/
+fastlane/test_output/
 
-
-
-
-
+## Gemfile
+Gemfile.lock
+vendor/bundle/

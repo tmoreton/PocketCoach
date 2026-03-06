@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
 
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo-link">Mend.ly</a>
+      <a href="/" class="logo-link">PocketCoach</a>
       <a href="#" class="nav-cta">Download</a>
     </div>
   </nav>
@@ -16,9 +16,9 @@ document.querySelector('#app').innerHTML = `
   <main>
     <section class="hero">
       <div class="hero-text">
-        <h1>Therapy that fits<br/><span class="gradient-text">your life</span></h1>
+        <h1>Coaching that fits<br/><span class="gradient-text">your life</span></h1>
         <p class="subtitle">
-          Mend.ly is a private AI companion that helps you process
+          PocketCoach is a private AI companion that helps you process
           your thoughts, build healthier habits, and feel heard — anytime,
           anywhere.
         </p>
@@ -44,7 +44,7 @@ document.querySelector('#app').innerHTML = `
         <div class="iphone-frame">
           <div class="iphone-notch"></div>
           <div class="iphone-screen">
-            <img src="/screenshot.png" alt="Mend.ly app screenshot" class="screenshot" />
+            <img src="/screenshot.png" alt="PocketCoach app screenshot" class="screenshot" />
           </div>
           <div class="iphone-home-bar"></div>
         </div>
@@ -54,7 +54,7 @@ document.querySelector('#app').innerHTML = `
     <div class="section-divider"></div>
 
     <section id="features" class="features">
-      <h2 class="section-heading">Why Mend.ly?</h2>
+      <h2 class="section-heading">Why PocketCoach?</h2>
       <div class="features-grid">
         <div class="feature-card fade-up" style="--delay: 0s">
           <div class="feature-icon feature-icon--sage">
@@ -84,10 +84,10 @@ document.querySelector('#app').innerHTML = `
   <footer>
     <div class="footer-inner">
       <div class="footer-links">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/support.html">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/support">Support</a>
       </div>
-      <p>&copy; 2025 Mend.ly. All rights reserved.</p>
+      <p>&copy; 2025 PocketCoach. All rights reserved.</p>
     </div>
   </footer>
 `

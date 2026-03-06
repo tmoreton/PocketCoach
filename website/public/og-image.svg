@@ -1,40 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF8F5"/>
-      <stop offset="100%" stop-color="#E8DDD3"/>
+      <stop offset="0%" stop-color="#F7F4F0"/>
+      <stop offset="100%" stop-color="#EDE7DF"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6B9E8A"/>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7BAF9A"/>
       <stop offset="100%" stop-color="#4A7B68"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Decorative circles -->
-  <circle cx="950" cy="120" r="200" fill="#6B9E8A" opacity="0.08"/>
-  <circle cx="1050" cy="450" r="150" fill="#6B9E8A" opacity="0.06"/>
-  <circle cx="150" cy="500" r="120" fill="#E8DDD3" opacity="0.5"/>
+  <!-- Subtle decorative shapes -->
+  <circle cx="1020" cy="160" r="260" fill="#6B9E8A" opacity="0.05"/>
+  <circle cx="1100" cy="480" r="180" fill="#6B9E8A" opacity="0.04"/>
+  <circle cx="100" cy="560" r="140" fill="#6B9E8A" opacity="0.03"/>
 
-  <!-- Logo icon -->
-  <rect x="80" y="160" width="72" height="72" rx="16" fill="url(#accent)"/>
-  <text x="116" y="213" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="white">m</text>
+  <!-- Accent bar at top -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
+
+  <!-- App icon - rounded square with heart from actual icon -->
+  <rect x="80" y="80" width="76" height="76" rx="18" fill="url(#accent)"/>
+  <rect x="80" y="80" width="76" height="76" rx="18" fill="url(#shine)"/>
+  <!-- Heart matching app icon, scaled from 512 viewBox to 76px square positioned at (80,80) -->
+  <g transform="translate(80,80) scale(0.1484375)">
+    <path d="M256 400 C256 400 128 310 128 220 C128 170 168 140 208 140 C235 140 252 158 256 165 C260 158 277 140 304 140 C344 140 384 170 384 220 C384 310 256 400 256 400Z" fill="white"/>
+  </g>
 
   <!-- Brand name -->
-  <text x="170" y="212" font-family="Georgia, 'DM Serif Display', serif" font-size="42" fill="#2B3D4F" letter-spacing="-0.5">Mend.ly</text>
+  <text x="174" y="133" font-family="Georgia, 'DM Serif Display', serif" font-size="38" fill="#2B3D4F" font-weight="bold" letter-spacing="-0.5">PocketCoach</text>
+
+  <!-- Divider line -->
+  <rect x="80" y="195" width="60" height="4" rx="2" fill="#6B9E8A" opacity="0.6"/>
 
   <!-- Main headline -->
-  <text x="80" y="320" font-family="Georgia, 'DM Serif Display', serif" font-size="64" fill="#2B3D4F" letter-spacing="-1">Therapy that fits your life</text>
+  <text x="80" y="280" font-family="Georgia, 'DM Serif Display', serif" font-size="72" fill="#2B3D4F" letter-spacing="-1.5">Coaching that fits</text>
+  <text x="80" y="360" font-family="Georgia, 'DM Serif Display', serif" font-size="72" fill="#2B3D4F" letter-spacing="-1.5">your life</text>
 
   <!-- Subtitle -->
-  <text x="80" y="385" font-family="Inter, -apple-system, sans-serif" font-size="26" fill="#556270">Private AI companion for mental wellness.</text>
-  <text x="80" y="420" font-family="Inter, -apple-system, sans-serif" font-size="26" fill="#556270">No account required. Available anytime.</text>
-
-  <!-- Bottom bar -->
-  <rect x="0" y="600" width="1200" height="30" fill="url(#accent)"/>
+  <text x="80" y="420" font-family="-apple-system, Inter, sans-serif" font-size="24" fill="#6B7B8D" letter-spacing="0.2">Private AI companion for couples coaching.</text>
+  <text x="80" y="455" font-family="-apple-system, Inter, sans-serif" font-size="24" fill="#6B7B8D" letter-spacing="0.2">No account required. Available anytime.</text>
 
   <!-- URL -->
-  <text x="80" y="530" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#6B9E8A" font-weight="600">mendly.app</text>
+  <text x="80" y="540" font-family="-apple-system, Inter, sans-serif" font-size="22" fill="#6B9E8A" font-weight="600" letter-spacing="0.5">getpocketcoach.app</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="624" width="1200" height="6" fill="url(#accent)"/>
 </svg>

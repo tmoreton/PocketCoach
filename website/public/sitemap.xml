@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mendly.app</loc>
+    <loc>https://getpocketcoach.app</loc>
     <lastmod>2025-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mendly.app/support.html</loc>
+    <loc>https://getpocketcoach.app/support</loc>
     <lastmod>2025-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mendly.app/privacy.html</loc>
+    <loc>https://getpocketcoach.app/privacy</loc>
     <lastmod>2025-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

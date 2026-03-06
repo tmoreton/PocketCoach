@@ -1,7 +1,7 @@
 {
-  "name": "Mend.ly - Your AI Therapy Companion",
-  "short_name": "Mend.ly",
-  "description": "Private AI companion for therapy and mental wellness. No account required, no data stored, encrypted end-to-end.",
+  "name": "PocketCoach - Your AI Couples Coaching Companion",
+  "short_name": "PocketCoach",
+  "description": "Private AI companion for couples coaching and relationship wellness. No account required, no data stored, encrypted end-to-end.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#FAF8F5",
