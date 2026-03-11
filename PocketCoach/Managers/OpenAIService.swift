@@ -1,5 +1,4 @@
 import Foundation
-import UIKit
 
 enum OpenAIError: Error, LocalizedError {
     case invalidResponse
@@ -26,10 +25,6 @@ class OpenAIService {
     private let proxyURL = "https://mend.ly/api/analyze"
     private let session = URLSession.shared
 
-    private var deviceId: String {
-        UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-    }
-
     var isConfigured: Bool { true }
 
     /// Send a chat completion request via the Vercel proxy.
@@ -44,7 +39,6 @@ class OpenAIService {
         var request = URLRequest(url: URL(string: proxyURL)!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(deviceId, forHTTPHeaderField: "X-Device-ID")
         if let sessionId = sessionId {
             request.addValue(sessionId, forHTTPHeaderField: "X-Session-ID")
         }
