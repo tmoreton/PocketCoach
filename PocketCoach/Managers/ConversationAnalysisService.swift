@@ -310,6 +310,14 @@ class ConversationAnalysisService {
     func analyzeConversationV2(utterances: [SpeakerUtterance], sessionId: String = UUID().uuidString, conversationMode: String = "couple") async -> SessionAnalysisV2? {
         guard !utterances.isEmpty else { return nil }
 
+        // Ensure user has consented to AI data sharing
+        guard UserDefaults.standard.bool(forKey: "hasAcceptedAIDataConsent") else {
+            #if DEBUG
+            print("AI data consent not granted — skipping analysis")
+            #endif
+            return nil
+        }
+
         // Route to solo pipeline when in solo mode
         if conversationMode == "solo" {
             return await analyzeConversationV2Solo(utterances: utterances, sessionId: sessionId)

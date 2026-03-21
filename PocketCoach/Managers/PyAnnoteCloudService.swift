@@ -42,6 +42,10 @@ class PyAnnoteCloudService {
             throw PyAnnoteError.invalidAPIKey
         }
 
+        guard UserDefaults.standard.bool(forKey: "hasAcceptedAIDataConsent") else {
+            throw PyAnnoteError.invalidAPIKey // User has not consented to AI data sharing
+        }
+
         #if DEBUG
         print("[PyAnnote] Starting cloud diarization: \(audio.count) samples, \(String(format: "%.0f", sampleRate))Hz")
         #endif

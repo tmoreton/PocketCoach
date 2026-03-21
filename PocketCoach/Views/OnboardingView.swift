@@ -6,9 +6,10 @@ struct OnboardingView: View {
     @State private var currentPage = 0
     @State private var hasRequestedMicPermission = false
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    @AppStorage("hasAcceptedAIDataConsent") private var hasAcceptedAIDataConsent = false
     @StateObject private var fluidAudioManager = FluidAudioManager.shared
 
-    let totalPages = 4
+    let totalPages = 5
 
     var body: some View {
         ZStack {
@@ -31,17 +32,22 @@ struct OnboardingView: View {
                     FeaturesPage()
                         .tag(1)
 
+                    DataConsentPage(
+                        hasAcceptedConsent: $hasAcceptedAIDataConsent
+                    )
+                    .tag(2)
+
                     PermissionsPage(
                         hasRequestedMicPermission: $hasRequestedMicPermission
                     )
-                    .tag(2)
+                    .tag(3)
 
                     GetStartedPage(
                         isModelReady: fluidAudioManager.isModelReady,
                         isInitializing: fluidAudioManager.isInitializing,
                         onComplete: completeOnboarding
                     )
-                    .tag(3)
+                    .tag(4)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.easeInOut, value: currentPage)
@@ -148,7 +154,7 @@ struct FeaturesPage: View {
         ("mic.fill", "Record Conversations", "Capture sessions and revisit them anytime"),
         ("person.2.wave.2", "Know Who Said What", "See each partner's words side by side"),
         ("brain.head.profile", "Understand Patterns", "Spot communication habits and grow together"),
-        ("lock.shield.fill", "Private & Secure", "Everything stays on your device")
+        ("lock.shield.fill", "Private & Secure", "Your data is never used to train AI models")
     ]
 
     var body: some View {
@@ -192,6 +198,160 @@ struct FeaturesPage: View {
             }
 
             Spacer()
+        }
+    }
+}
+
+struct DataConsentPage: View {
+    @Binding var hasAcceptedConsent: Bool
+
+    var body: some View {
+        VStack(spacing: 30) {
+            Text("Your Data & Privacy")
+                .font(.custom("DMSerifDisplay-Regular", size: 34))
+                .foregroundColor(.white)
+                .padding(.top, 60)
+
+            VStack(alignment: .leading, spacing: 20) {
+                Text("To analyze your conversations, PocketCoach sends data to the following third-party services:")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.9))
+
+                DataSharingRow(
+                    icon: "text.bubble.fill",
+                    service: "OpenAI",
+                    detail: "Your conversation transcripts are sent for coaching analysis and pattern detection."
+                )
+
+                DataSharingRow(
+                    icon: "waveform",
+                    service: "PyAnnote",
+                    detail: "Your audio is sent for speaker identification so we can tell who said what."
+                )
+
+                Text("Your data is used only to provide analysis results and is not used to train AI models. See our Privacy Policy for full details.")
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.7))
+            }
+            .padding(.horizontal, 30)
+
+            Spacer()
+
+            Button(action: {
+                hasAcceptedConsent = true
+            }) {
+                Text(hasAcceptedConsent ? "Agreed" : "I Agree")
+                    .font(.headline)
+                    .foregroundColor(hasAcceptedConsent ? Color(red: 0.30, green: 0.56, blue: 0.54) : .white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 15)
+                    .background(hasAcceptedConsent ? Color.white : Color.white.opacity(0.3))
+                    .cornerRadius(25)
+            }
+            .disabled(hasAcceptedConsent)
+            .padding(.horizontal, 30)
+
+            Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/support")!)
+                .font(.caption)
+                .foregroundColor(.white.opacity(0.7))
+                .underline()
+                .padding(.bottom, 40)
+        }
+    }
+}
+
+struct DataSharingRow: View {
+    let icon: String
+    let service: String
+    let detail: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 15) {
+            Image(systemName: icon)
+                .font(.system(size: 22))
+                .foregroundColor(.white)
+                .frame(width: 30)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(service)
+                    .font(.headline)
+                    .foregroundColor(.white)
+
+                Text(detail)
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.8))
+            }
+        }
+    }
+}
+
+struct AIDataConsentSheet: View {
+    @Binding var hasAcceptedConsent: Bool
+    @Binding var isPresented: Bool
+
+    var body: some View {
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color(red: 0.29, green: 0.48, blue: 0.41),
+                    Color(red: 0.42, green: 0.62, blue: 0.54)
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
+            VStack(spacing: 30) {
+                Text("Your Data & Privacy")
+                    .font(.custom("DMSerifDisplay-Regular", size: 34))
+                    .foregroundColor(.white)
+                    .padding(.top, 60)
+
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("We've updated our app to be more transparent about how your data is used. To continue, please review and agree.")
+                        .font(.subheadline)
+                        .foregroundColor(.white.opacity(0.9))
+
+                    DataSharingRow(
+                        icon: "text.bubble.fill",
+                        service: "OpenAI",
+                        detail: "Your conversation transcripts are sent for coaching analysis and pattern detection."
+                    )
+
+                    DataSharingRow(
+                        icon: "waveform",
+                        service: "PyAnnote",
+                        detail: "Your audio is sent for speaker identification so we can tell who said what."
+                    )
+
+                    Text("Your data is used only to provide analysis results and is not used to train AI models. See our Privacy Policy for full details.")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.7))
+                }
+                .padding(.horizontal, 30)
+
+                Spacer()
+
+                Button(action: {
+                    hasAcceptedConsent = true
+                    isPresented = false
+                }) {
+                    Text("I Agree")
+                        .font(.headline)
+                        .foregroundColor(Color(red: 0.29, green: 0.48, blue: 0.41))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 15)
+                        .background(Color.white)
+                        .cornerRadius(25)
+                }
+                .padding(.horizontal, 30)
+
+                Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/support")!)
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.7))
+                    .underline()
+                    .padding(.bottom, 40)
+            }
         }
     }
 }
@@ -262,7 +422,7 @@ struct PermissionRow: View {
             Spacer()
 
             Button(action: action) {
-                Text(isEnabled ? "Enabled" : "Enable")
+                Text(isEnabled ? "Enabled" : "Continue")
                     .font(.caption)
                     .fontWeight(.semibold)
                     .foregroundColor(isEnabled ? Color(red: 0.30, green: 0.56, blue: 0.54) : .white)

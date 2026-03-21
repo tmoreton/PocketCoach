@@ -42,6 +42,13 @@ class SpeakerCorrectionService {
     /// Correct speaker attribution using GPT-4o.
     /// Returns corrected utterances, or nil if LLM is not configured or fails.
     func correctSpeakerAttribution(utterances: [SpeakerUtterance], sessionId: String? = nil) async -> [SpeakerUtterance]? {
+        guard UserDefaults.standard.bool(forKey: "hasAcceptedAIDataConsent") else {
+            #if DEBUG
+            print("LLM speaker correction skipped: AI data consent not granted")
+            #endif
+            return nil
+        }
+
         guard openAI.isConfigured else {
             #if DEBUG
             print("LLM speaker correction skipped: no API key configured")

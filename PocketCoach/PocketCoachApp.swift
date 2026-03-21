@@ -17,6 +17,8 @@ struct PocketCoachApp: App {
     @StateObject private var liveActivityManager = LiveActivityManager()
     @AppStorage("appearanceMode") private var appearanceMode = "light"
     @State private var showingOnboarding = false
+    @AppStorage("hasAcceptedAIDataConsent") private var hasAcceptedAIDataConsent = false
+    @State private var showingConsentPrompt = false
 
     init() {
         FirebaseApp.configure()
@@ -36,6 +38,10 @@ struct PocketCoachApp: App {
                 }
                 .sheet(isPresented: $showingOnboarding) {
                     OnboardingView(isPresented: $showingOnboarding)
+                        .interactiveDismissDisabled()
+                }
+                .sheet(isPresented: $showingConsentPrompt) {
+                    AIDataConsentSheet(hasAcceptedConsent: $hasAcceptedAIDataConsent, isPresented: $showingConsentPrompt)
                         .interactiveDismissDisabled()
                 }
                 .onAppear {
@@ -163,6 +169,9 @@ struct PocketCoachApp: App {
             Task {
                 try? await FluidAudioManager.shared.initializeASRIfNeeded()
             }
+        } else if !hasAcceptedAIDataConsent {
+            // Existing user who completed onboarding before consent was added
+            showingConsentPrompt = true
         }
     }
 
