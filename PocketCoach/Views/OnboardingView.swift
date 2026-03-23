@@ -422,7 +422,7 @@ struct PermissionRow: View {
             Spacer()
 
             Button(action: action) {
-                Text(isEnabled ? "Enabled" : "Continue")
+                Text(isEnabled ? "Done" : "Continue")
                     .font(.caption)
                     .fontWeight(.semibold)
                     .foregroundColor(isEnabled ? Color(red: 0.30, green: 0.56, blue: 0.54) : .white)
