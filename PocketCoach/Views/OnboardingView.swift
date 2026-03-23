@@ -251,7 +251,7 @@ struct DataConsentPage: View {
             .disabled(hasAcceptedConsent)
             .padding(.horizontal, 30)
 
-            Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/support")!)
+            Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
                 .font(.caption)
                 .foregroundColor(.white.opacity(0.7))
                 .underline()
@@ -346,7 +346,7 @@ struct AIDataConsentSheet: View {
                 }
                 .padding(.horizontal, 30)
 
-                Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/support")!)
+                Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
                     .font(.caption)
                     .foregroundColor(.white.opacity(0.7))
                     .underline()

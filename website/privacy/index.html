@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - PocketCoach</title>
-    <meta name="description" content="PocketCoach privacy policy. We collect no personal data, require no account, and use no tracking. Your conversations stay private and encrypted." />
+    <meta name="description" content="PocketCoach privacy policy. Learn how we handle your data, including what is shared with third-party AI services for conversation analysis." />
     <meta name="theme-color" content="#6B9E8A" />
     <link rel="canonical" href="https://getpocketcoach.app/privacy" />
 
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://getpocketcoach.app/privacy" />
     <meta property="og:title" content="Privacy Policy - PocketCoach" />
-    <meta property="og:description" content="PocketCoach collects no personal data, requires no account, and uses no tracking. Your conversations stay completely private." />
+    <meta property="og:description" content="PocketCoach privacy policy. Learn how we handle your data, including what is shared with third-party AI services for conversation analysis." />
     <meta property="og:image" content="https://getpocketcoach.app/og-image.png" />
     <meta property="og:site_name" content="PocketCoach" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Privacy Policy - PocketCoach" />
-    <meta name="twitter:description" content="PocketCoach collects no personal data, requires no account, and uses no tracking." />
+    <meta name="twitter:description" content="PocketCoach privacy policy. Learn how we handle your data, including what is shared with third-party AI services." />
     <meta name="twitter:image" content="https://getpocketcoach.app/og-image.png" />
 
     <meta name="robots" content="index, follow" />
@@ -50,79 +50,106 @@
 
         <main class="subpage">
           <h1>Privacy Policy</h1>
-          <p class="last-updated">Last updated: January 31, 2025</p>
+          <p class="last-updated">Last updated: March 21, 2026</p>
 
           <h2>Our Commitment to Your Privacy</h2>
           <p>
-            PocketCoach was built with a fundamental belief: your mental health conversations are deeply personal
-            and should remain entirely yours. We designed PocketCoach from the ground up to ensure your privacy
-            is never compromised.
+            PocketCoach was built with a fundamental belief: your conversations are deeply personal.
+            We are committed to being transparent about how your data is handled and giving you
+            control over what is shared.
           </p>
 
-          <h2>No Personal Data Collection</h2>
+          <h2>What Data We Collect</h2>
           <p>
-            PocketCoach does not collect or store any personal information. Specifically, we do not collect:
+            PocketCoach does not require an account, login, or any personal identifiers. The app
+            collects the following data solely to provide its core features:
           </p>
           <ul>
-            <li>Personal identifiers (name, email, phone number, or any account information)</li>
-            <li>Usage or analytics data</li>
-            <li>Device information or identifiers</li>
-            <li>Location data</li>
-            <li>Audio recordings or voice data</li>
-            <li>Health or fitness data</li>
-            <li>Browsing or search history</li>
-            <li>Crash logs or diagnostics</li>
+            <li><strong>Audio recordings:</strong> Captured via your device's microphone when you start a coaching session.</li>
+            <li><strong>Conversation transcripts:</strong> Generated from your audio recordings using on-device speech recognition.</li>
+            <li><strong>Session analytics:</strong> Aggregated, non-identifying usage events (e.g., session started, session completed) collected via Firebase Analytics to help us improve the app.</li>
+          </ul>
+          <p>
+            We do not collect personal identifiers, location data, health data, browsing history, or crash logs.
+          </p>
+
+          <h2>How Your Data Is Used</h2>
+          <p>
+            Your data is used exclusively to provide PocketCoach's coaching analysis features:
+          </p>
+          <ul>
+            <li><strong>Conversation analysis:</strong> Transcripts are sent to OpenAI's API to generate coaching feedback, detect communication patterns, and provide actionable insights.</li>
+            <li><strong>Speaker identification:</strong> Audio recordings may be sent to PyAnnote's API to identify which speaker said what (speaker diarization).</li>
+            <li><strong>On-device transcription:</strong> Speech recognition is performed locally on your device using an on-device model.</li>
           </ul>
 
-          <h2>How Your Conversations Are Processed</h2>
+          <h2>Third-Party Services</h2>
           <p>
-            To provide helpful AI responses, conversation transcripts are sent securely to our
-            AI service provider for processing. All data is transmitted using industry-standard
-            encryption (TLS). Transcripts are not stored on any server after a response is
-            generated, and are never used to train AI models or shared with third parties.
+            PocketCoach shares data with the following third-party services to provide its features.
+            Each service receives only the data necessary for its function:
           </p>
+          <ul>
+            <li>
+              <strong>OpenAI</strong> — Receives conversation transcripts for coaching analysis and
+              pattern detection. Data is transmitted via encrypted HTTPS connections. OpenAI's API
+              data is not used to train their models.
+              See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.
+            </li>
+            <li>
+              <strong>PyAnnote</strong> — Receives audio recordings for speaker diarization (identifying
+              who said what). Data is transmitted via encrypted HTTPS connections.
+              See <a href="https://www.pyannote.ai/privacy" target="_blank" rel="noopener">PyAnnote's Privacy Policy</a>.
+            </li>
+            <li>
+              <strong>Firebase Analytics (Google)</strong> — Receives aggregated, non-identifying usage
+              events. No personal data or conversation content is shared with Firebase.
+              See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Information</a>.
+            </li>
+          </ul>
           <p>
-            Audio processing and speech recognition happen locally on your device. Only the
-            resulting text transcript is transmitted — your voice recordings never leave your iPhone.
+            Your data is never sold, used for advertising, or shared with any parties beyond those listed above.
+            Your conversation data is not used to train any AI models.
+          </p>
+
+          <h2>Your Consent</h2>
+          <p>
+            Before any data is sent to third-party AI services, PocketCoach asks for your explicit
+            consent within the app. You must agree to the data sharing disclosure before conversation
+            analysis features are activated. No data is transmitted to OpenAI or PyAnnote without
+            your permission.
+          </p>
+
+          <h2>Data Storage</h2>
+          <p>
+            Conversation history and session data are stored locally on your device and, if enabled,
+            synced to your private iCloud account via Apple's CloudKit. This data is protected by
+            iOS's built-in security features and is only accessible to you. You can delete this
+            data at any time within the app or by removing the app.
           </p>
 
           <h2>No Account Required</h2>
           <p>
             PocketCoach does not require you to create an account, sign in, or provide any personal
-            information to use the app. There is no registration process, no email verification,
-            and no user profiles.
-          </p>
-
-          <h2>No Tracking or Analytics</h2>
-          <p>
-            PocketCoach does not integrate with any third-party analytics, advertising, or tracking services.
-            There are no SDKs, pixels, or external scripts collecting information about your usage.
-          </p>
-
-          <h2>Data Storage</h2>
-          <p>
-            Any data generated during your use of PocketCoach (such as conversation history) is stored
-            locally on your device in your private application container. This data is protected by
-            iOS's built-in security features and is only accessible to you. You can delete this
-            data at any time by removing the app.
+            information to use the app.
           </p>
 
           <h2>Children's Privacy</h2>
           <p>
-            Since PocketCoach does not collect any personal information from any user, we inherently
-            comply with children's privacy regulations including COPPA.
+            PocketCoach is not intended for use by children under 13. Since the app does not collect
+            personal identifiers, we do not knowingly collect personal information from children.
           </p>
 
           <h2>Changes to This Policy</h2>
           <p>
-            If we ever update this privacy policy, changes will be posted on this page with an
+            If we update this privacy policy, changes will be posted on this page with an
             updated revision date.
           </p>
 
           <h2>Contact</h2>
           <p>
             If you have questions about this privacy policy, please reach out via our
-            <a href="/support">support page</a>.
+            <a href="/support">support page</a> or email
+            <a href="mailto:support@getpocketcoach.app">support@getpocketcoach.app</a>.
           </p>
         </main>
 

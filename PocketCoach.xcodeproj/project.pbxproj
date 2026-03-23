@@ -25,20 +25,8 @@
 		AF9E25362F048C7B000AD552 /* AudioProcessingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */; };
 		AF9E25372F048C7B000AD552 /* SharedVADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25302F048C7B000AD552 /* SharedVADManager.swift */; };
 		AF9E25382F048C7B000AD552 /* TranscriptionTextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */; };
-		AFCC00082F5A000100000008 /* PocketCoachScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */; };
-		AFCC00092F5A000100000009 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC00022F5A000100000002 /* SnapshotHelper.swift */; };
 		AFF0DA0A2F4C942300255250 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AFF0DA0B2F4C942300255250 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AFCC000A2F5A00010000000A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFAEA93E2EF5ED7700F632EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF3F63CE2EF7092B00E1A424;
-			remoteInfo = PocketCoach;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF3A18812F2D4DC50006DF0E /* Decoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Decoder.mlmodelc; sourceTree = "<group>"; };
@@ -59,9 +47,6 @@
 		AF9E252F2F048C7B000AD552 /* AudioProcessingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessingUtilities.swift; sourceTree = "<group>"; };
 		AF9E25302F048C7B000AD552 /* SharedVADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedVADManager.swift; sourceTree = "<group>"; };
 		AF9E25312F048C7B000AD552 /* TranscriptionTextProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTextProcessor.swift; sourceTree = "<group>"; };
-		AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketCoachScreenshots.swift; sourceTree = "<group>"; };
-		AFCC00022F5A000100000002 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
-		AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketCoachScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -92,13 +77,6 @@
 			files = (
 				AF58238F2EF71D81003C33CE /* FluidAudio in Frameworks */,
 				AFF0DA0A2F4C942300255250 /* FirebaseAnalytics in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFCC00062F5A000100000006 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +173,6 @@
 			children = (
 				AF5823802EF71666003C33CE /* Shared */,
 				AF3F63D02EF7092B00E1A424 /* PocketCoach */,
-				AFCC00042F5A000100000004 /* PocketCoachScreenshots */,
 				AF5823742EF7136A003C33CE /* Frameworks */,
 				AFAEA9472EF5ED7800F632EA /* Products */,
 				AF3A188C2F2D4DC50006DF0E /* BundledModels */,
@@ -207,18 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				AF3F63CF2EF7092B00E1A424 /* PocketCoach.app */,
-				AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AFCC00042F5A000100000004 /* PocketCoachScreenshots */ = {
-			isa = PBXGroup;
-			children = (
-				AFCC00012F5A000100000001 /* PocketCoachScreenshots.swift */,
-				AFCC00022F5A000100000002 /* SnapshotHelper.swift */,
-			);
-			path = PocketCoachScreenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,24 +215,6 @@
 			productReference = AF3F63CF2EF7092B00E1A424 /* PocketCoach.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFCC000F2F5A00010000000F /* PocketCoachScreenshots */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFCC000E2F5A00010000000E /* Build configuration list for PBXNativeTarget "PocketCoachScreenshots" */;
-			buildPhases = (
-				AFCC00052F5A000100000005 /* Sources */,
-				AFCC00062F5A000100000006 /* Frameworks */,
-				AFCC00072F5A000100000007 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AFCC000B2F5A00010000000B /* PBXTargetDependency */,
-			);
-			name = PocketCoachScreenshots;
-			productName = PocketCoachScreenshots;
-			productReference = AFCC00032F5A000100000003 /* PocketCoachScreenshots.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,10 +227,6 @@
 				TargetAttributes = {
 					AF3F63CE2EF7092B00E1A424 = {
 						CreatedOnToolsVersion = 16.4;
-					};
-					AFCC000F2F5A00010000000F = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = AF3F63CE2EF7092B00E1A424;
 					};
 				};
 			};
@@ -304,7 +249,6 @@
 			projectRoot = "";
 			targets = (
 				AF3F63CE2EF7092B00E1A424 /* PocketCoach */,
-				AFCC000F2F5A00010000000F /* PocketCoachScreenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -326,13 +270,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFCC00072F5A000100000007 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -351,24 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFCC00052F5A000100000005 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFCC00082F5A000100000008 /* PocketCoachScreenshots.swift in Sources */,
-				AFCC00092F5A000100000009 /* SnapshotHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AFCC000B2F5A00010000000B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF3F63CE2EF7092B00E1A424 /* PocketCoach */;
-			targetProxy = AFCC000A2F5A00010000000A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF3F63D82EF7092C00E1A424 /* Debug */ = {
@@ -402,7 +322,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 			};
 			name = Debug;
 		};
@@ -438,7 +357,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -562,55 +480,6 @@
 			};
 			name = Release;
 		};
-		AFCC000C2F5A00010000000C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GVXC5FQ2RP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoachScreenshots;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PocketCoach;
-			};
-			name = Debug;
-		};
-		AFCC000D2F5A00010000000D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GVXC5FQ2RP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reactnativenerd.PocketCoachScreenshots;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PocketCoach;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -628,15 +497,6 @@
 			buildConfigurations = (
 				AFAEA9502EF5ED7900F632EA /* Debug */,
 				AFAEA9512EF5ED7900F632EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFCC000E2F5A00010000000E /* Build configuration list for PBXNativeTarget "PocketCoachScreenshots" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFCC000C2F5A00010000000C /* Debug */,
-				AFCC000D2F5A00010000000D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
