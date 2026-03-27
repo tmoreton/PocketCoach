@@ -36,6 +36,10 @@ class OpenAIService {
         maxTokens: Int = 4096,
         sessionId: String? = nil
     ) async throws -> String {
+        guard UserDefaults.standard.bool(forKey: "hasAcceptedAIDataConsent") else {
+            throw OpenAIError.invalidResponse // User has not consented to AI data sharing
+        }
+
         var request = URLRequest(url: URL(string: proxyURL)!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

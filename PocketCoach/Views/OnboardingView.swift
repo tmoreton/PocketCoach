@@ -11,6 +11,15 @@ struct OnboardingView: View {
 
     let totalPages = 5
 
+    /// Whether the Next button should be enabled for the current page
+    private var canAdvance: Bool {
+        // Block advancing past the consent page until user agrees
+        if currentPage == 2 && !hasAcceptedAIDataConsent {
+            return false
+        }
+        return true
+    }
+
     var body: some View {
         ZStack {
             // Background gradient - calming teal
@@ -51,6 +60,12 @@ struct OnboardingView: View {
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.easeInOut, value: currentPage)
+                .onChange(of: currentPage) { newPage in
+                    // Prevent swiping past consent page without agreeing
+                    if newPage > 2 && !hasAcceptedAIDataConsent {
+                        currentPage = 2
+                    }
+                }
 
                 // Page indicator
                 HStack(spacing: 8) {
@@ -79,9 +94,10 @@ struct OnboardingView: View {
                         .foregroundColor(Color(red: 0.29, green: 0.48, blue: 0.41))
                         .padding(.horizontal, 30)
                         .padding(.vertical, 15)
-                        .background(Color.white)
+                        .background(canAdvance ? Color.white : Color.white.opacity(0.4))
                         .cornerRadius(25)
                     }
+                    .disabled(!canAdvance)
                     .padding(.bottom, 20)
                 }
             }
@@ -212,35 +228,54 @@ struct DataConsentPage: View {
                 .foregroundColor(.white)
                 .padding(.top, 60)
 
-            VStack(alignment: .leading, spacing: 20) {
-                Text("To analyze your conversations, PocketCoach sends data to the following third-party services:")
-                    .font(.subheadline)
-                    .foregroundColor(.white.opacity(0.9))
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("To provide conversation analysis, PocketCoach sends your data to third-party services. No data is sent without your permission.")
+                        .font(.subheadline)
+                        .foregroundColor(.white.opacity(0.9))
 
-                DataSharingRow(
-                    icon: "text.bubble.fill",
-                    service: "OpenAI",
-                    detail: "Your conversation transcripts are sent for coaching analysis and pattern detection."
-                )
+                    DataSharingRow(
+                        icon: "text.bubble.fill",
+                        service: "OpenAI (openai.com)",
+                        detail: "Your conversation transcripts (text of what was said) are sent to OpenAI's servers for coaching analysis, communication pattern detection, and feedback generation."
+                    )
 
-                DataSharingRow(
-                    icon: "waveform",
-                    service: "PyAnnote",
-                    detail: "Your audio is sent for speaker identification so we can tell who said what."
-                )
+                    DataSharingRow(
+                        icon: "waveform",
+                        service: "PyAnnote (pyannote.ai)",
+                        detail: "Your audio recordings are sent to PyAnnote's servers for speaker diarization — identifying who said what in the conversation."
+                    )
 
-                Text("Your data is used only to provide analysis results and is not used to train AI models. See our Privacy Policy for full details.")
-                    .font(.caption)
-                    .foregroundColor(.white.opacity(0.7))
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Your data is:")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white.opacity(0.9))
+                        Text("• Used only to generate your analysis results")
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.8))
+                        Text("• Not used to train AI models")
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.8))
+                        Text("• Not sold or shared for advertising")
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.8))
+                    }
+
+                    Link("Read our full Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
+                        .font(.caption)
+                        .foregroundColor(.white)
+                        .underline()
+                }
+                .padding(.horizontal, 30)
             }
-            .padding(.horizontal, 30)
 
             Spacer()
 
             Button(action: {
                 hasAcceptedConsent = true
             }) {
-                Text(hasAcceptedConsent ? "Agreed" : "I Agree")
+                Text(hasAcceptedConsent ? "Agreed ✓" : "I Agree to Data Sharing")
                     .font(.headline)
                     .foregroundColor(hasAcceptedConsent ? Color(red: 0.30, green: 0.56, blue: 0.54) : .white)
                     .frame(maxWidth: .infinity)
@@ -250,12 +285,7 @@ struct DataConsentPage: View {
             }
             .disabled(hasAcceptedConsent)
             .padding(.horizontal, 30)
-
-            Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
-                .font(.caption)
-                .foregroundColor(.white.opacity(0.7))
-                .underline()
-                .padding(.bottom, 40)
+            .padding(.bottom, 40)
         }
     }
 }
@@ -307,28 +337,47 @@ struct AIDataConsentSheet: View {
                     .foregroundColor(.white)
                     .padding(.top, 60)
 
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("We've updated our app to be more transparent about how your data is used. To continue, please review and agree.")
-                        .font(.subheadline)
-                        .foregroundColor(.white.opacity(0.9))
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text("To provide conversation analysis, PocketCoach sends your data to third-party services. Please review and agree before continuing.")
+                            .font(.subheadline)
+                            .foregroundColor(.white.opacity(0.9))
 
-                    DataSharingRow(
-                        icon: "text.bubble.fill",
-                        service: "OpenAI",
-                        detail: "Your conversation transcripts are sent for coaching analysis and pattern detection."
-                    )
+                        DataSharingRow(
+                            icon: "text.bubble.fill",
+                            service: "OpenAI (openai.com)",
+                            detail: "Your conversation transcripts (text of what was said) are sent to OpenAI's servers for coaching analysis, communication pattern detection, and feedback generation."
+                        )
 
-                    DataSharingRow(
-                        icon: "waveform",
-                        service: "PyAnnote",
-                        detail: "Your audio is sent for speaker identification so we can tell who said what."
-                    )
+                        DataSharingRow(
+                            icon: "waveform",
+                            service: "PyAnnote (pyannote.ai)",
+                            detail: "Your audio recordings are sent to PyAnnote's servers for speaker diarization — identifying who said what in the conversation."
+                        )
 
-                    Text("Your data is used only to provide analysis results and is not used to train AI models. See our Privacy Policy for full details.")
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.7))
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Your data is:")
+                                .font(.caption)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white.opacity(0.9))
+                            Text("• Used only to generate your analysis results")
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.8))
+                            Text("• Not used to train AI models")
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.8))
+                            Text("• Not sold or shared for advertising")
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.8))
+                        }
+
+                        Link("Read our full Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .underline()
+                    }
+                    .padding(.horizontal, 30)
                 }
-                .padding(.horizontal, 30)
 
                 Spacer()
 
@@ -336,7 +385,7 @@ struct AIDataConsentSheet: View {
                     hasAcceptedConsent = true
                     isPresented = false
                 }) {
-                    Text("I Agree")
+                    Text("I Agree to Data Sharing")
                         .font(.headline)
                         .foregroundColor(Color(red: 0.29, green: 0.48, blue: 0.41))
                         .frame(maxWidth: .infinity)
@@ -345,12 +394,7 @@ struct AIDataConsentSheet: View {
                         .cornerRadius(25)
                 }
                 .padding(.horizontal, 30)
-
-                Link("Privacy Policy", destination: URL(string: "https://getpocketcoach.app/privacy")!)
-                    .font(.caption)
-                    .foregroundColor(.white.opacity(0.7))
-                    .underline()
-                    .padding(.bottom, 40)
+                .padding(.bottom, 40)
             }
         }
     }
